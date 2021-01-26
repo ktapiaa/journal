@@ -3,10 +3,11 @@ let express = require('express');
 let app = express(); //instance of express
 let sequelize = require('./db');
 
-let journal = require('./controllers/journalcontroller');
 let user = require('./controllers/usercontroller');
+let journal = require('./controllers/journalcontroller');
 
 sequelize.sync();
+
 // sequelize.sync({force:true})
 app.use(require('./middleware/headers'));
 
